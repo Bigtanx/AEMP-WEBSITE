@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav
+      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-40"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 mt-2">
+            <img src="./img/iA logo.png" alt="Logo" class="h-10" />
+          </div>
+
+          <!-- Hamburger Menu (Mobile) -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Menu Items -->
+          <ul
+            id="menu"
+            class="hidden md:flex space-x-6 text-gray-700 font-medium text-sm md:text-base"
+          >
+            <li>
+              <a
+                href="home.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="aboutus.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="programs.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Programs</a
+              >
+            </li>
+            <li>
+              <a
+                href="joinus.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Join Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4">
+          <a
+            href="home.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Home</a
+          >
+          <a
+            href="aboutus.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >About Us</a
+          >
+          <a
+            href="programs.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Programs</a
+          >
+          <a
+            href="joinus.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Join Us</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </nav>
+    <section class="px-4 sm:px-6 lg:px-16 py-10 bg-white text-left mt-14">
+      <h1
+        class="text-2xl sm:text-2xl md:text-5xl lg:text-4xl font-extrabold text-gray-900 mb-6 text-left"
+      >
+        Get In Touch With Us
+      </h1>
+
+      <p>
+        We'd love tohear from you! whether you have a question, want to get
+        involved, or need more information about our programs, we're here to
+        help. Reach out to us through any of the channels below and we will
+        respond as soon as possible
+      </p>
+
+      <div>
+        <h2
+          class="text-2xl sm:text-2xl md:text-5xl lg:text-4xl font-extrabold text-gray-900 mb-6 text-left mt-16"
+        >
+          Office Hours
+        </h2>
+
+        <li>Monday to Friday: 9:00AM - 5:00PM</li>
+        <li>Saturday: By appointmment only</li>
+        <li>Sunday: Closed</li>
+
+        <div class="relative">
+          <button
+            onclick="toggleDropdown('dropdown1')"
+            class="bg-[#2e9942] text-white px-4 py-2 rounded-md focus:outline-none"
+          >
+            <i class="fas fa-chevron-down"></i>Book an appointment
+          </button>
+          <div
+            id="dropdown1"
+            class="absolute mt-2 bg-white border rounded-md shadow-md w-40 hidden z-10"
+          >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+              >Become a Part</a
+            >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Do for Us</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Join Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!--last-->
+      <h2
+        class="text-2xl sm:text-2xl md:text-5xl lg:text-4xl font-extrabold text-gray-900 mb-6 text-left mt-12"
+      >
+        Send Us Message
+      </h2>
+
+      <p>
+        We'd love tohear from you! whether you have a question, want to get
+        involved, or need more information about our programs, we're here to
+        help. Reach out to us through any of the channels below and we will
+        respond as soon as possible
+      </p>
+    </section>
+
+    <!-- footer section -->
+    <footer class="bg-[#37B24D] px-6 py-20 text-white min-h-[400px]">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
+        <!-- Left Side - 70% -->
+        <div class="w-full md:w-[70%] space-y-6">
+          <h2 class="text-3xl font-extrabold text-black">
+            Connect with Us Online
+          </h2>
+          <p class="text-black">
+            Stay connected with us through our social media channels. Follow us
+            for the latest updates, events, and inspiring stories.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-md">
+              Fill Contact Form
+            </button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-md">
+              Join Our Community
+            </button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-md">
+              News Letter
+            </button>
+          </div>
+
+          <!-- Headquarters -->
+          <div>
+            <h3 class="text-xl font-bold text-black">Headquarters:</h3>
+            <p class="text-black">
+              The African Economic Mandate Project | 2, Layi Fashogbon Way road
+              beside GT Bank, Oju Ore, Ota, Ogun State, Nigeria.
+            </p>
+          </div>
+
+          <!-- Logo -->
+          <div>
+            <img
+              src="./img/iA logo.png"
+              class="w-[160px] h-auto invert brightness-0 contrast-200"
+              alt="Logo"
+            />
+          </div>
+        </div>
+
+        <!-- Right Side - 30% -->
+        <div class="w-full md:w-[30%] space-y-6">
+          <!-- Contact Text -->
+          <div class="text-3xl font-extrabold text-white">
+            Need Help? <br />
+            Contact Mosun for Enquiries, Partnerships, and Sponsorships.
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-2">
+            <p><i class="fas fa-phone-alt mr-2"></i>+234 706 927 5316</p>
+            <p>
+              <i class="fas fa-envelope mr-2"></i>Aempigniteafrica@gmail.com
+            </p>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-4 text-white text-2xl">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-whatsapp"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

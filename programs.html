@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav
+      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-40"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 mt-2">
+            <img src="./img/iA logo.png" alt="Logo" class="h-10" />
+          </div>
+
+          <!-- Hamburger Menu (Mobile) -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Menu Items -->
+          <ul
+            id="menu"
+            class="hidden md:flex space-x-6 text-gray-700 font-medium text-sm md:text-base"
+          >
+            <li>
+              <a
+                href="home.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="aboutus.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="programs.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Programs</a
+              >
+            </li>
+            <li>
+              <a
+                href="joinus.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Join Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4">
+          <a
+            href="home.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Home</a
+          >
+          <a
+            href="aboutus.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >About Us</a
+          >
+          <a
+            href="programs.html"
+            class="block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Programs</a
+          >
+          <a
+            href="joinus.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Join Us</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Our Program -->
+    <section
+      class="flex flex-col md:flex-row items-center justify-between px-6 py-10 h-auto md:h-[50vh] bg-white gap-8 mt-9"
+    >
+      <!-- Text content -->
+      <div class="md:w-1/2 w-full">
+        <h2 class="text-3xl font-bold mb-4">Our Programs:</h2>
+        <p class="text-lg leading-relaxed">
+          Empowering Through Action <br />
+          At the African Economic Mandate Project, our programs are at the heart
+          of our mission to foster economic development, nurture
+          entrepreneurship, and uplift communities across Africa. Each year, we
+          host a series of impactful programs designed to promote career growth,
+          educational advancement, and spiritual enrichment.
+        </p>
+      </div>
+
+      <!-- Icon: hidden on small screens, visible on md+ -->
+      <div
+        class="hidden md:flex justify-center items-center md:w-1/2 text-[6rem]"
+      >
+        <i class="fa-solid fa-handshake text-green-600"></i>
+      </div>
+    </section>
+
+    <!-- 8 cards sections -->
+    <section class="px-4 py-10 bg-gray-50">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
+      >
+        <!-- Card (repeat this 8 times) -->
+        <div class="bg-white shadow p-6 rounded-lg flex flex-col items-start">
+          <i class="fa-solid fa-handshake text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
+          <p class="text-sm mb-4">
+            February <br />
+            Celebration of faith and culture, the Rejoice Africa Concert brings
+            together communities for a night of inspiring music and worship.
+            This annual event is a highlight of our calendar, showcasing the
+            rich diversity and talent within our region.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+          >
+            Learn More
+          </a>
+        </div>
+
+        <!-- Duplicate the above card 7 more times -->
+        <!-- CARD 2 -->
+        <div class="bg-white shadow p-6 rounded-lg flex flex-col items-start">
+          <i class="fa-solid fa-handshake text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
+          <p class="text-sm mb-4">
+            February <br />
+            Celebration of faith and culture, the Rejoice Africa Concert brings
+            together communities for a night of inspiring music and worship.
+            This annual event is a highlight of our calendar, showcasing the
+            rich diversity and talent within our region.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+          >
+            Learn More
+          </a>
+        </div>
+        <!-- card 3 -->
+        <div class="bg-white shadow p-6 rounded-lg flex flex-col items-start">
+          <i class="fa-solid fa-handshake text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
+          <p class="text-sm mb-4">
+            February <br />
+            Celebration of faith and culture, the Rejoice Africa Concert brings
+            together communities for a night of inspiring music and worship.
+            This annual event is a highlight of our calendar, showcasing the
+            rich diversity and talent within our region.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+          >
+            Learn More
+          </a>
+        </div>
+        <!-- CARD 4 -->
+        <div class="bg-white shadow p-6 rounded-lg flex flex-col items-start">
+          <i class="fa-solid fa-handshake text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
+          <p class="text-sm mb-4">
+            February <br />
+            Celebration of faith and culture, the Rejoice Africa Concert brings
+            together communities for a night of inspiring music and worship.
+            This annual event is a highlight of our calendar, showcasing the
+            rich diversity and talent within our region.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+          >
+            Learn More
+          </a>
+        </div>
+        <!-- card 5 -->
+        <div class="bg-white shadow p-6 rounded-lg flex flex-col items-start">
+          <i class="fa-solid fa-handshake text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
+          <p class="text-sm mb-4">
+            February <br />
+            Celebration of faith and culture, the Rejoice Africa Concert brings
+            together communities for a night of inspiring music and worship.
+            This annual event is a highlight of our calendar, showcasing the
+            rich diversity and talent within our region.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+          >
+            Learn More
+          </a>
+        </div>
+        <!-- card 6 -->
+        <div class="bg-white shadow p-6 rounded-lg flex flex-col items-start">
+          <i class="fa-solid fa-handshake text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
+          <p class="text-sm mb-4">
+            February <br />
+            Celebration of faith and culture, the Rejoice Africa Concert brings
+            together communities for a night of inspiring music and worship.
+            This annual event is a highlight of our calendar, showcasing the
+            rich diversity and talent within our region.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+          >
+            Learn More
+          </a>
+        </div>
+        <!-- card 7 -->
+        <div class="bg-white shadow p-6 rounded-lg flex flex-col items-start">
+          <i class="fa-solid fa-handshake text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
+          <p class="text-sm mb-4">
+            February <br />
+            Celebration of faith and culture, the Rejoice Africa Concert brings
+            together communities for a night of inspiring music and worship.
+            This annual event is a highlight of our calendar, showcasing the
+            rich diversity and talent within our region.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+          >
+            Learn More
+          </a>
+        </div>
+        <!-- card 8 -->
+        <div class="bg-white shadow p-6 rounded-lg flex flex-col items-start">
+          <i class="fa-solid fa-handshake text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
+          <p class="text-sm mb-4">
+            February <br />
+            Celebration of faith and culture, the Rejoice Africa Concert brings
+            together communities for a night of inspiring music and worship.
+            This annual event is a highlight of our calendar, showcasing the
+            rich diversity and talent within our region.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our gallery section -->
+    <section class="px-4 py-10 bg-white">
+      <h2 class="text-3xl font-bold text-center mb-6">Our Gallery</h2>
+
+      <div class="relative max-w-7xl mx-auto">
+        <!-- Carousel Container -->
+        <div class="overflow-hidden">
+          <div
+            id="carousel-track"
+            class="flex transition-transform duration-500 ease-in-out"
+            style="transform: translateX(0)"
+          >
+            <!-- 6 Cards -->
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3 border-[10px] border-yellow-400 rounded-xl p-2"
+            >
+              <img
+                src="./img/chairman.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <!-- <p class="text-xl font-semibold mb-2">
+                Empowered <br />
+                Entrepreneurs
+              </p> -->
+              <a
+                href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-2 px-4 py-2 text-black text-sm rounded transition"
+              >
+                Learn More
+              </a>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3 border-[10px] border-yellow-400 rounded-xl p-2"
+            >
+              <img
+                src="./img/chairman2.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <!-- <p class="text-xl font-semibold mb-2">
+                Supported <br />
+                Education
+              </p> -->
+              <a
+                href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-2 px-4 py-2 text-black text-sm rounded transition"
+              >
+                Learn More
+              </a>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3 border-[10px] border-yellow-400 rounded-xl p-2"
+            >
+              <img
+                src="./img/chairman3.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <!-- <p class="text-xl font-semibold mb-2">
+                Promoted Career <br />Development
+              </p> -->
+              <a
+                href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-2 px-4 py-2 text-black text-sm rounded transition"
+              >
+                Learn More
+              </a>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3 border-[10px] border-yellow-400 rounded-xl p-2"
+            >
+              <img
+                src="./img/chairman4.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <!-- <p class="text-xl font-semibold mb-2">
+                Served The <br />
+                Community
+              </p> -->
+              <a
+                href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-2 px-4 py-2 text-black text-sm rounded transition"
+              >
+                Learn More
+              </a>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3 border-[10px] border-yellow-400 rounded-xl p-2"
+            >
+              <img
+                src="./img/chairman.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <!-- <p class="text-xl font-semibold mb-2">
+                Promoted Career <br />
+                Development
+              </p> -->
+              <a
+                href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-2 px-4 py-2 text-black text-sm rounded transition"
+              >
+                Learn More
+              </a>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3 border-[10px] border-yellow-400 rounded-xl p-2"
+            >
+              <img
+                src="./img/chairman.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <!-- <p class="text-xl font-semibold mb-2">
+                Promoted Career <br />
+                Development
+              </p> -->
+              <a
+                href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-2 px-4 py-2 text-black text-sm rounded transition"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow Buttons -->
+        <button
+          id="prevBtn"
+          class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-50"
+        >
+          <i class="fas fa-chevron-left text-gray-600 text-xl"></i>
+        </button>
+
+        <button
+          id="nextBtn"
+          class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-50"
+        >
+          <i class="fas fa-chevron-right text-gray-600 text-xl"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- icon section -->
+    <section class="bg-white py-10 px-4">
+      <div class="flex flex-wrap justify-between gap-15 max-w-7xl mx-auto">
+        <!-- Single Item (Repeat 4 times) -->
+        <div class="flex flex-col items-center text-center">
+          <i class="fa-solid fa-handshake text-green-600 text-6xl mb-2"></i>
+          <p class="text-black-600 text-lg font-semibold">
+            Donate to Our Cause
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center text-center">
+          <i class="fa-solid fa-handshake text-green-600 text-6xl mb-2"></i>
+          <p class="text-black-600 text-lg font-semibold">
+            Donate to Our Cause
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center text-center">
+          <i class="fa-solid fa-handshake text-green-600 text-6xl mb-2"></i>
+          <p class="text-black-600 text-lg font-semibold">
+            Donate to Our Cause
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center text-center">
+          <i class="fa-solid fa-handshake text-green-600 text-6xl mb-2"></i>
+          <p class="text-black-600 text-lg font-semibold">
+            Donate to Our Cause
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="bg-[#37B24D] px-6 py-20 text-white min-h-[400px]">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
+        <!-- Left Side - 70% -->
+        <div class="w-full md:w-[70%] space-y-6">
+          <h2 class="text-3xl font-extrabold text-black">
+            Connect with Us Online
+          </h2>
+          <p class="text-black">
+            Stay connected with us through our social media channels. Follow us
+            for the latest updates, events, and inspiring stories.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-md">
+              Fill Contact Form
+            </button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-md">
+              Join Our Community
+            </button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-md">
+              News Letter
+            </button>
+          </div>
+
+          <!-- Headquarters -->
+          <div>
+            <h3 class="text-xl font-bold text-black">Headquarters:</h3>
+            <p class="text-black">
+              The African Economic Mandate Project | 2, Layi Fashogbon Way road
+              beside GT Bank, Oju Ore, Ota, Ogun State, Nigeria.
+            </p>
+          </div>
+
+          <!-- Logo -->
+          <div>
+            <img
+              src="./img/iA logo.png"
+              class="w-[160px] h-auto invert brightness-0 contrast-200"
+              alt="Logo"
+            />
+          </div>
+        </div>
+
+        <!-- Right Side - 30% -->
+        <div class="w-full md:w-[30%] space-y-6">
+          <!-- Contact Text -->
+          <div class="text-3xl font-extrabold text-white">
+            Need Help? <br />
+            Contact Mosun for Enquiries, Partnerships, and Sponsorships.
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-2">
+            <p><i class="fas fa-phone-alt mr-2"></i>+234 706 927 5316</p>
+            <p>
+              <i class="fas fa-envelope mr-2"></i>Aempigniteafrica@gmail.com
+            </p>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-4 text-white text-2xl">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-whatsapp"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

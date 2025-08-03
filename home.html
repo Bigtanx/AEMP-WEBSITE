@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#eeeef1]">
+    <!-- navigation Area-->
+    <nav
+      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-40"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 mt-2">
+            <img src="./img/iA logo.png" alt="Logo" class="h-10" />
+          </div>
+
+          <!-- Hamburger Menu (Mobile) -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Menu Items -->
+          <ul
+            id="menu"
+            class="hidden md:flex space-x-6 text-gray-700 font-medium text-sm md:text-base"
+          >
+            <li>
+              <a
+                href="home.html"
+                class="nav-link active-nav hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="aboutus.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="programs.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Programs</a
+              >
+            </li>
+            <li>
+              <a
+                href="joinus.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Join Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="nav-link hover:bg-[#2e9942] px-3 py-2 rounded-md hover:text-white"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4">
+          <a
+            href="home.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md active-nav"
+            >Home</a
+          >
+          <a
+            href="aboutus.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >About Us</a
+          >
+          <a
+            href="programs.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Programs</a
+          >
+          <a
+            href="joinus.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Join Us</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link block px-4 py-2 hover:bg-[#2e9942] hover:text-white rounded-md"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <!-- <section id="home" class="px-4 sm:px-6 py-10 bg-white"> -->
+    <div class="relative w-screen overflow-hidden mt-11">
+      <div
+        id="carousel"
+        class="flex transition-transform duration-1000 ease-in-out"
+        style="width: 300vw"
+      >
+        <div class="w-screen flex-shrink-0">
+          <img
+            src="./img/IMG-001.jpg"
+            alt="Slide 1"
+            class="w-screen h-[250px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
+          />
+        </div>
+        <div class="w-screen flex-shrink-0">
+          <img
+            src="./img/IMG-0002.jpg"
+            alt="Slide 2"
+            class="w-screen h-[250px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
+          />
+        </div>
+        <div class="w-screen flex-shrink-0">
+          <img
+            src="./img/IMG-003.jpg"
+            alt="Slide 3"
+            class="w-screen h-[250px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- welcome section -->
+    <section class="px-4 sm:px-6 lg:px-16 py-10 bg-white text-left">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 text-center"
+      >
+        Welcome to the AEMP - Ignite Africa
+      </h1>
+      <p
+        class="text-bold sm:text-base md:text-lg lg:text-xl text-gray-600 text-center leading-relaxed max-w-4xl mx-auto "
+      >
+        <h3 class="font-bold text-center text-2xl ">Empowering Lives, Transforming Communities.</h3> <br />
+        For the past 15 years, we have built a solid reputation as a
+        faith-driven organization dedicated to fostering the growth and
+        development of career professionals, business leaders, and building
+        entrepreneurs across Africa. Our commitment to economic development is
+        unwavering, and we take pride in the impact we've made through our
+        comprehensive programs.
+      </p>
+    </section>
+
+    <!-- Strategic Objective Section -->
+    <section
+      class="bg-[#e6f4ec] py-12 px-4 sm:px-6 lg:px-20 transition-all duration-500 ease-in-out"
+    >
+      <h1
+        class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 text-center"
+      >
+        Our Strategic Objective
+      </h1>
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 ease-in-out"
+          >
+            <h2 class="text-xl font-bold text-[#2e9942] mb-3">
+              Empowering Lives
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We're dedicated to igniting personal transformation and building
+              purpose-driven professionals.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 ease-in-out"
+          >
+            <h2 class="text-xl font-bold text-[#2e9942] mb-3">
+              Content Commercialization
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Leveraging our expertise to commercialize valuable content that
+              supports our mission.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 ease-in-out"
+          >
+            <h2 class="text-xl font-bold text-[#2e9942] mb-3">
+              Career & Entrepreneurship Development
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We are committed to promoting career advancement and
+              entrepreneurial growth, equipping individuals with the skills and
+              knowledge they need to succeed.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 ease-in-out"
+          >
+            <h2 class="text-xl font-bold text-[#2e9942] mb-3">
+              Comprehensive Programs
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              From mentorship to leadership training, we empower people with
+              skills to thrive economically.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 ease-in-out"
+          >
+            <h2 class="text-xl font-bold text-[#2e9942] mb-3">
+              Faith-Driven Vision
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Our foundation is rooted in faith and excellence, serving
+              communities with integrity and hope.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 ease-in-out"
+          >
+            <h2 class="text-xl font-bold text-[#2e9942] mb-3">
+              Comprehensive Programs
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              From mentorship to leadership training, we empower people with
+              skills to thrive economically.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 ease-in-out"
+          >
+            <h2 class="text-xl font-bold text-[#2e9942] mb-3">
+              Faith-Driven Vision
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Our foundation is rooted in faith and excellence, serving
+              communities with integrity and hope.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 ease-in-out"
+          >
+            <h2 class="text-xl font-bold text-[#2e9942] mb-3">
+              Comprehensive Programs
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              From mentorship to leadership training, we empower people with
+              skills to thrive economically.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Impact so far section -->
+
+    <section class="px-4 py-10 bg-white">
+      <h1
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-10 text-center"
+      >
+        Our Impact So Far
+      </h1>
+
+      <div class="flex flex-wrap gap-6 justify-between text-center">
+        <div class="flex-1 min-w-[130px]">
+          <h2 class="text-3xl md:text-4xl font-bold text-green-700">11</h2>
+          <p class="mt-2 text-gray-600">Countries Reached</p>
+        </div>
+
+        <div class="flex-1 min-w-[130px]">
+          <h2 class="text-3xl md:text-4xl font-bold text-green-700">3</h2>
+          <p class="mt-2 text-gray-600">Projects Completed</p>
+        </div>
+
+        <div class="flex-1 min-w-[130px]">
+          <h2 class="text-3xl md:text-4xl font-bold text-green-700">4,370</h2>
+          <p class="mt-2 text-gray-600">Youths Engaged</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- join us in making difference sections -->
+    <section class="px-4 sm:px-6 lg:px-16 py-10 bg-white text-left">
+      <h2
+        class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 text-center"
+      >
+        Join Us In Making Difference
+      </h2>
+      <p
+        class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-10 text-center"
+      >
+        As we continue to expand our reach and deepen our impact, we invite you
+        to be a part of our journey. Whether through volunteering, partnership
+        or donation, your support helps us empower lives and transform
+        communities across Africa.
+      </p>
+
+      <!-- Four Partner Blocks -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 mt-5">
+        <!-- Partner Card 1 -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow">
+          <div class="flex justify-center mb-4">
+            <i class="fa-solid fa-users-rectangle text-green-600 text-4xl"></i>
+          </div>
+
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Partner with Us
+          </h3>
+          <p class="text-gray-600 mb-4">
+            We are taking a fresh approach to solving the challenge of
+            unemployment in Africa. Learn how you can be a partner in the
+            transformation.
+          </p>
+          <button
+            class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md"
+          >
+            Become a Partner
+          </button>
+        </div>
+
+        <!-- Partner Card 2 -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow">
+          <div class="flex justify-center mb-4">
+            <i class="fas fa-handshake text-green-600 text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Donate To Our Cause
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Your generosity makes our work possible. You can contribute
+            financially or as an advocate for our community
+          </p>
+          <button
+            class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md"
+          >
+            Donate To Our Cause
+          </button>
+        </div>
+
+        <!-- Partner Card 3 -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow">
+          <div class="flex justify-center mb-4">
+            <i
+              class="fa-solid fa-heart-circle-check text-green-600 text-4xl"
+            ></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Become a Member
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Become a member of our youth community today to enjoy the benefits
+            of a community commited to your growth.
+          </p>
+          <button
+            class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md"
+          >
+            Join Our Community
+          </button>
+        </div>
+
+        <!-- Partner Card 4 -->
+        <div class="p-6 bg-gray-50 rounded-lg shadow">
+          <div class="flex justify-center mb-4">
+            <i class="fas fa-handshake text-green-600 text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            See Past Programs
+          </h3>
+          <p class="text-gray-600 mb-4">
+            See what we're doing to reshape the narrative and impact young
+            African generations.
+          </p>
+          <button
+            class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md"
+          >
+            View Past Projects
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Leadership Team Section -->
+    <section class="px-4 py-10 bg-white">
+      <h2 class="text-3xl font-bold text-center mb-6">Our Leadership Team</h2>
+
+      <div class="relative max-w-7xl mx-auto">
+        <!-- Carousel Container -->
+        <div class="overflow-hidden">
+          <div
+            id="carousel-track"
+            class="flex transition-transform duration-500 ease-in-out"
+            style="transform: translateX(0)"
+          >
+            <!-- 6 Cards -->
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3"
+            >
+              <img
+                src="./img/chairman.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <p class="text-xl font-semibold">Lanre Billion Olaley</p>
+              <p class="text-sm text-gray-400">Chairman</p>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3"
+            >
+              <img
+                src="./img/chairman2.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <p class="text-xl font-semibold">Lanre Billion Olaley</p>
+              <p class="text-sm text-gray-400">Chairman</p>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3"
+            >
+              <img
+                src="./img/chairman3.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <p class="text-xl font-semibold">Lanre Billion Olaley</p>
+              <p class="text-sm text-gray-400">Chairman</p>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3"
+            >
+              <img
+                src="./img/chairman4.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <p class="text-xl font-semibold">Lanre Billion Olaley</p>
+              <p class="text-sm text-gray-400">Chairman</p>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3"
+            >
+              <img
+                src="./img/chairman.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <p class="text-xl font-semibold">Lanre Billion Olaley</p>
+              <p class="text-sm text-gray-400">Chairman</p>
+            </div>
+
+            <div
+              class="w-[80vw] sm:w-[45vw] md:w-[280px] flex-shrink-0 text-center mx-3"
+            >
+              <img
+                src="./img/chairman.jpg"
+                class="w-[250px] h-[280px] object-cover rounded-xl mx-auto mb-2"
+              />
+              <p class="text-xl font-semibold">Lanre Billion Olaley</p>
+              <p class="text-sm text-gray-400">Chairman</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow Buttons -->
+        <button
+          id="prevBtn"
+          class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-50"
+        >
+          <i class="fas fa-chevron-left text-gray-600 text-xl"></i>
+        </button>
+
+        <button
+          id="nextBtn"
+          class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-50"
+        >
+          <i class="fas fa-chevron-right text-gray-600 text-xl"></i>
+        </button>
+      </div>
+    </section>
+    <!-- </section> -->
+    <!-- footer section -->
+
+    <footer class="bg-[#37B24D] px-6 py-20 text-white min-h-[400px]">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
+        <!-- Left Side - 70% -->
+        <div class="w-full md:w-[70%] space-y-6">
+          <h2 class="text-3xl font-extrabold text-black">
+            Connect with Us Online
+          </h2>
+          <p class="text-black">
+            Stay connected with us through our social media channels. Follow us
+            for the latest updates, events, and inspiring stories.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-md">
+              Fill Contact Form
+            </button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-md">
+              Join Our Community
+            </button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-md">
+              News Letter
+            </button>
+          </div>
+
+          <!-- Headquarters -->
+          <div>
+            <h3 class="text-xl font-bold text-black">Headquarters:</h3>
+            <p class="text-black">
+              The African Economic Mandate Project | 2, Layi Fashogbon Way road
+              beside GT Bank, Oju Ore, Ota, Ogun State, Nigeria.
+            </p>
+          </div>
+
+          <!-- Logo -->
+          <div>
+            <img
+              src="./img/iA logo.png"
+              class="w-[160px] h-auto invert brightness-0 contrast-200"
+              alt="Logo"
+            />
+          </div>
+        </div>
+
+        <!-- Right Side - 30% -->
+        <div class="w-full md:w-[30%] space-y-6">
+          <!-- Contact Text -->
+          <div class="text-3xl font-extrabold text-white">
+            Need Help? <br />
+            Contact Mosun for Enquiries, Partnerships, and Sponsorships.
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-2">
+            <p><i class="fas fa-phone-alt mr-2"></i>+234 706 927 5316</p>
+            <p>
+              <i class="fas fa-envelope mr-2"></i>Aempigniteafrica@gmail.com
+            </p>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-4 text-white text-2xl">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-whatsapp"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
