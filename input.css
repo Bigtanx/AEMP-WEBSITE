@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .active-nav {
-  @apply bg-[#2e9942] text-white;
+  @apply bg-brightGreen text-white;
 }
