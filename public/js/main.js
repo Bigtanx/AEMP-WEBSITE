@@ -122,7 +122,7 @@ function toggleFlushAccordion(button) {
   const icon = button.querySelector(".toggle-icon");
 
   content.classList.toggle("hidden");
-  icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+  icon.textContent = content.classList.contains("hidden") ? "+" : "-";
 }
 
 //dropdown
