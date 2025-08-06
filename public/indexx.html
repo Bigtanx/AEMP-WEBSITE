@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Programs Overview Section -->
+    <section
+      class="flex flex-col md:flex-row items-center justify-between px-6 py-12 bg-[#2e9942] gap-8 mt-9"
+    >
+      <!-- Text content -->
+      <div class="md:w-1/2 w-full">
+        <h2 class="text-4xl font-bold text-white mb-4">Our Programs:</h2>
+        <p class="text-lg font-light text-white leading-relaxed">
+          Empowering Through Action <br />
+          At the African Economic Mandate Project, our programs are at the heart
+          of our mission to foster economic development, nurture
+          entrepreneurship, and uplift communities across Africa. Each year, we
+          host a series of impactful programs designed to promote career growth,
+          educational advancement, and spiritual enrichment.
+        </p>
+      </div>
+
+      <!-- Icon for medium+ screens -->
+      <div
+        class="hidden md:flex justify-center items-center md:w-1/2 text-[6rem]"
+      >
+        <i class="fa-solid fa-handshake text-orange-600"></i>
+      </div>
+    </section>
+
+    <!-- Programs Cards Section -->
+    <section class="px-4 py-10 bg-[#2e9942]">
+      <div class="max-w-7xl mx-auto">
+        <!-- Toggle Button -->
+        <div class="text-center mb-8">
+          <button
+            id="toggleButton"
+            class="px-6 py-3 bg-orange-600 text-white font-semibold rounded hover:bg-orange-700 transition"
+          >
+            Show Programs
+          </button>
+        </div>
+
+        <!-- Cards Container -->
+        <div
+          id="cardsContainer"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-opacity duration-700 opacity-0 pointer-events-none"
+        >
+          <!-- CARD TEMPLATE (Repeat with different content) -->
+          <!-- CARD 1 -->
+          <div
+            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+          >
+            <i class="fa-solid fa-handshake text-orange-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
+            <p class="text-sm mb-4">
+              February <br />
+              Celebration of faith and culture, the Rejoice Africa Concert
+              brings communities together for a night of inspiring worship and
+              music.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              Learn More
+            </a>
+          </div>
+
+          <!-- Duplicate and update below cards as needed -->
+          <div
+            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+          >
+            <i class="fa-solid fa-lightbulb text-green-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Innovation Bootcamp</h3>
+            <p class="text-sm mb-4">
+              April <br />
+              A hands-on program that nurtures creative thinking and
+              entrepreneurial skills for youth.
+            </p>
+            <a
+              href="#"
+              class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-orange-600 transition"
+            >
+              Learn More
+            </a>
+          </div>
+
+          <div
+            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+          >
+            <i class="fa-solid fa-briefcase text-green-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Career Growth Summit</h3>
+            <p class="text-sm mb-4">
+              June <br />
+              Equipping professionals with tools and mentorship for career
+              advancement.
+            </p>
+            <a
+              href="#"
+              class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-orange-600 transition"
+            >
+              Learn More
+            </a>
+          </div>
+
+          <div
+            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+          >
+            <i class="fa-solid fa-users text-orange-600 text-4xl mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Youth Empowerment Forum</h3>
+            <p class="text-sm mb-4">
+              August <br />
+              Uplifting young people with training, mentorship, and leadership
+              tools.
+            </p>
+            <a
+              href="#"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              Learn More
+            </a>
+          </div>
+
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript to toggle visibility -->
+    <script>
+      const toggleBtn = document.getElementById("toggleButton");
+      const cardsContainer = document.getElementById("cardsContainer");
+
+      toggleBtn.addEventListener("click", () => {
+        const isVisible = !cardsContainer.classList.contains("opacity-0");
+        cardsContainer.classList.toggle("opacity-0");
+        cardsContainer.classList.toggle("pointer-events-none");
+        toggleBtn.textContent = isVisible ? "Show Programs" : "Hide Programs";
+      });
+    </script>
+  </body>
+</html>
