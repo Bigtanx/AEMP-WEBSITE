@@ -138,3 +138,12 @@ function toggleDropdown(id) {
     dropdown.classList.toggle("hidden");
   }
 }
+
+// card
+function toggleCard(button) {
+  const content = button.previousElementSibling.querySelector("p");
+  content.classList.toggle("hidden");
+  button.textContent = content.classList.contains("hidden")
+    ? "See More"
+    : "See Less";
+}

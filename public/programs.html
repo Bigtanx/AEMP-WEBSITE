@@ -157,197 +157,261 @@
       <!-- Background logo image -->
       <div
         class="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-90 z-0"
-        style="background-image: url('/public/img/iA\ logo-white.png')"
+        style="background-image: url('/public/img/ia-logo-white.png')"
       ></div>
 
       <div class="relative z-10 max-w-7xl mx-auto">
-        <!-- Toggle Button -->
-        <div class="text-center mb-8">
-          <button
-            id="toggleButton"
-            class="px-6 py-3 bg-orange-600 text-white font-semibold rounded hover:bg-orange-700 transition"
-          >
-            Show Programs
-          </button>
-        </div>
+        <h2 class="text-4xl text-white font-bold text-center mb-8">
+          Our Programs
+        </h2>
 
         <!-- Cards Container -->
-        <div
-          id="cardsContainer"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-opacity duration-700 opacity-0 pointer-events-none"
-        >
-          <!-- CARD TEMPLATE (Repeat with different content) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- CARD TEMPLATE -->
           <!-- CARD 1 -->
           <div
-            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
           >
-            <i class="fa-solid fa-handshake text-orange-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Rejoice Africa Concert</h3>
-            <p class="text-sm mb-4">
-              February <br />
-              Celebration of faith and culture, the Rejoice Africa Concert
-              brings communities together for a night of inspiring worship and
-              music.
-            </p>
-            <a
-              href="https://drive.google.com/file/d/1aFFRjzj39oT60dWIfgXv2s8FZ3H6OF4p/view"
-              target="_blank"
-              rel="noopener noreferrer"
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-music text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Rejoice Africa Concert
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                February <br />
+                celebration of faith and culture, the Rejoice Africa Concert
+                brings together communities for a night of inspiring music and
+                worship. This annual event is a highlight of our calendar,
+                showcasing the rich diversity and talent within our region.
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
               class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
             >
-              Learn More
-            </a>
+              See More
+            </button>
           </div>
 
-          <!-- card 2 -->
+          <!-- CARD 2 -->
           <div
-            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
           >
-            <i class="fa-solid fa-lightbulb text-green-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Innovation Bootcamp</h3>
-            <p class="text-sm mb-4">
-              April <br />
-              A hands-on program that nurtures creative thinking and
-              entrepreneurial skills for youth.
-            </p>
-            <a
-              href="#"
-              class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-orange-600 transition"
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-briefcase text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Careerwise Seminar
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                April & October (Online Weekly Sessions) <br />
+                Designed for professionals and business leaders, the careerwise
+                seminar epuips participants with the tools they need to excel in
+                thier careers. Now available as a weekly online sessions, this
+                program offers flexible learning opportunities for individuals
+                at all stages of thier careers.
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-600 transition"
             >
-              Learn More
-            </a>
+              See More
+            </button>
           </div>
 
-          <!-- card 3 -->
+          <!-- CARD 3 -->
           <div
-            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
           >
-            <i class="fa-solid fa-briefcase text-green-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Career Growth Summit</h3>
-            <p class="text-sm mb-4">
-              June <br />
-              Equipping professionals with tools and mentorship for career
-              advancement.
-            </p>
-            <a
-              href="#"
-              class="mt-auto w-full px-4 py-2 bg-green-600 text-white text-sm text-center rounded hover:bg-orange-600 transition"
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-cake-candles text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Anniversary Celebration
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                May <br />
+                Join us each May as we celebrate another year of growth, impact,
+                and community at AEMP. Our anniversay celebration is a time to
+                reflect on our achievement and set goals for the future
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-600 transition"
             >
-              Learn More
-            </a>
+              See More
+            </button>
           </div>
 
-          <!-- card 4 -->
+          <!-- CARD 4 -->
           <div
-            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
           >
-            <i class="fa-solid fa-users text-orange-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Youth Empowerment Forum</h3>
-            <p class="text-sm mb-4">
-              August <br />
-              Uplifting young people with training, mentorship, and leadership
-              tools.
-            </p>
-            <a
-              href="#"
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i
+                class="fa-solid fa-graduation-cap text-orange-600 text-3xl"
+              ></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Educational Drant for Secondary & Primary Schools
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                Commited to supporting the next generation, we provide
+                educational grants to pupils and students in primary and
+                Secondary schools within our host communities. This program
+                helps enusure that young minds have access to the education they
+                need to thrive.
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
               class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
             >
-              Learn More
-            </a>
+              See More
+            </button>
           </div>
 
-          <!-- card 5 -->
+          <!-- CARD 5 -->
           <div
-            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
           >
-            <i class="fa-solid fa-users text-orange-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Youth Empowerment Forum</h3>
-            <p class="text-sm mb-4">
-              August <br />
-              Uplifting young people with training, mentorship, and leadership
-              tools.
-            </p>
-            <a
-              href="#"
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i
+                class="fa-solid fa-circle-question text-orange-600 text-3xl"
+              ></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Annual Secondary Schools Quiz Competition
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                Encouraging academic excellence, our Annual Secondary Quiz
+                Competition brings together students from across the region to
+                test thier knowledge and compete for scholarships and prizes
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
               class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
             >
-              Learn More
-            </a>
+              See More
+            </button>
           </div>
 
-          <!-- card 6 -->
+          <!-- CARD 6 -->
           <div
-            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
           >
-            <i class="fa-solid fa-users text-orange-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Youth Empowerment Forum</h3>
-            <p class="text-sm mb-4">
-              August <br />
-              Uplifting young people with training, mentorship, and leadership
-              tools.
-            </p>
-            <a
-              href="#"
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-star text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">Glory Night</h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                August <br />
+                A night of spiritual renewal and worship, Glory Night is an
+                annual gathering where we come together to seek divine guidance
+                and celebrate the blessings in our lives
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
               class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
             >
-              Learn More
-            </a>
+              See More
+            </button>
           </div>
 
-          <!-- card 7 -->
+          <!-- CARD 7 -->
           <div
-            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
           >
-            <i class="fa-solid fa-users text-orange-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Youth Empowerment Forum</h3>
-            <p class="text-sm mb-4">
-              August <br />
-              Uplifting young people with training, mentorship, and leadership
-              tools.
-            </p>
-            <a
-              href="#"
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-hands-praying text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Thanksgiving Day
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                December <br />
+                As the year draws to a close, our Thanksgiving Day event is an
+                opportunity to express our gratitude for the many successes and
+                milestones we've achieved. its a time for reflection, praise,
+                and community
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
               class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
             >
-              Learn More
-            </a>
+              See More
+            </button>
           </div>
 
-          <!-- card 8 -->
+          <!-- CARD 8 -->
           <div
-            class="card bg-white shadow p-6 rounded-lg flex flex-col items-start transform transition duration-500 hover:scale-[1.02]"
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
           >
-            <i class="fa-solid fa-users text-orange-600 text-4xl mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Youth Empowerment Forum</h3>
-            <p class="text-sm mb-4">
-              August <br />
-              Uplifting young people with training, mentorship, and leadership
-              tools.
-            </p>
-            <a
-              href="#"
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-laptop-code text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                ICT Skill Acquisition Program
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                Inaugural Edition: 2019 <br />
+                In response to the growing demand for technology skills, our ICT
+                Skill Acquisition Program provides participants with the
+                training needed to excel in the digital economy. This program
+                also offers interships and apprenticeships as part of our
+                commitment to driving innovation
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
               class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
             >
-              Learn More
-            </a>
+              See More
+            </button>
           </div>
 
-          <!-- Add more cards as needed -->
+          <!-- card 9 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-stethoscope text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Medical Outreach
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                Dedication to improving the well-being of our communities, our
+                Medical Outreach program offers free healthcare services to
+                those in need. This initiative is a vital part of our effort to
+                promote holistic development and well-being
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              See More
+            </button>
+          </div>
         </div>
       </div>
     </section>
-
-    <script>
-      const toggleBtn = document.getElementById("toggleButton");
-      const cardsContainer = document.getElementById("cardsContainer");
-
-      toggleBtn.addEventListener("click", () => {
-        const isVisible = !cardsContainer.classList.contains("opacity-0");
-        cardsContainer.classList.toggle("opacity-0");
-        cardsContainer.classList.toggle("pointer-events-none");
-        toggleBtn.textContent = isVisible ? "Show Programs" : "Hide Programs";
-      });
-    </script>
 
     <!-- footer section -->
     <footer class="bg-[#FFE5B4] px-6 py-20 text-white min-h-[400px]">
