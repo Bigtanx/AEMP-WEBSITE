@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav
+      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-40"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 mt-2">
+            <img src="./img/ai-logo.png" alt="Logo" class="h-10" />
+          </div>
+
+          <!-- Hamburger Menu (Mobile) -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Menu Items -->
+          <ul
+            id="menu"
+            class="hidden md:flex space-x-6 text-gray-700 font-medium text-sm md:text-base"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="aboutus.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="programs.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Programs</a
+              >
+            </li>
+            <li>
+              <a
+                href="joinus.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Join Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4">
+          <a
+            href="index.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Home</a
+          >
+          <a
+            href="aboutus.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >About Us</a
+          >
+          <a
+            href="programs.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Programs</a
+          >
+          <a
+            href="joinus.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Join Us</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="px-4 sm:px-6 lg:px-16 py-10 bg-[#2e9942] text-left mt-14">
+      <h1
+        class="text-2xl sm:text-2xl md:text-5xl lg:text-4xl font-extrabold text-white mb-6 text-left"
+      >
+        Get In Touch With Us
+      </h1>
+
+      <p class="text-white font-thin">
+        We'd love to hear from you! whether you have a question, want to get
+        involved, or need more information about our programs, we're here to
+        help. Reach out to us through any of the channels below and we will
+        respond as soon as possible
+      </p>
+
+      <div class="text-white">
+        <h2
+          class="text-2xl sm:text-2xl md:text-5xl lg:text-4xl font-extrabold mb-6 text-left mt-16"
+        >
+          Office Hours
+        </h2>
+
+        <li>Monday to Friday: 9:00AM - 5:00PM</li>
+        <li>Saturday: By appointmment only</li>
+        <li>Sunday: Closed</li>
+
+        <div class="relative">
+          <button
+            onclick="toggleDropdown('dropdown1')"
+            class="bg-orange-600 text-white px-4 py-2 rounded-md focus:outline-none"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+
+      <!--last-->
+    </section>
+
+    <!-- accordion section ---FAQ -->
+    <section class="px-12 py-5 bg-[#2e9942]">
+      <h3 class="text-5xl font-bold text-left mb-8 text-white">
+        Frequently Asked Questions
+      </h3>
+
+      <div id="accordionFlushExample" class="divide-y divide-[FFCA28]">
+        <!-- Accordion Item -->
+        <div class="accordion-item">
+          <h2>
+            <button
+              type="button"
+              class="w-full text-left px-4 py-3 bg-[#facc15] hover:bg-yellow-500 transition flex justify-between items-center font-medium"
+              onclick="toggleFlushAccordion(this)"
+            >
+              How do i become a community member?
+              <span class="text-lg toggle-icon">+</span>
+            </button>
+          </h2>
+          <div
+            class="accordion-content hidden px-4 py-3 bg-yellow-100 text-sm text-gray-800"
+          >
+            <p class="bg-yellow-100 p-3 rounded">
+              It is effortless. You can become a community member by registering
+              your interest here. Your registration will be reviewed by a team
+              member in less than 48 hours before you can be added to the
+              community group.
+            </p>
+          </div>
+        </div>
+        <!-- accordion 2 -->
+        <div class="accordion-item">
+          <h2>
+            <button
+              type="button"
+              class="w-full text-left px-4 py-3 bg-[#facc15] hover:bg-yellow-500 transition flex justify-between items-center font-medium"
+              onclick="toggleFlushAccordion(this)"
+            >
+              Do i need to pay to join your community
+              <span class="text-lg toggle-icon">+</span>
+            </button>
+          </h2>
+          <div
+            class="accordion-content hidden px-4 py-3 bg-yellow-100 text-sm text-gray-800"
+          >
+            <p class="bg-yellow-100 p-3 rounded">
+              It is effortless. You can become a community member by registering
+              your interest here. Your registration will be reviewed by a team
+              member in less than 48 hours before you can be added to the
+              community group
+            </p>
+          </div>
+        </div>
+        <!-- accordion 3 -->
+        <div class="accordion-item">
+          <h2>
+            <button
+              type="button"
+              class="w-full text-left px-4 py-3 bg-[#facc15] hover:bg-yellow-500 transition flex justify-between items-center font-medium"
+              onclick="toggleFlushAccordion(this)"
+            >
+              Is this a remote community ?
+              <span class="text-lg toggle-icon">+</span>
+            </button>
+          </h2>
+          <div
+            class="accordion-content hidden px-4 py-3 bg-yellow-100 text-sm text-gray-800"
+          >
+            <p class="bg-yellow-100 p-3 rounded">
+              It is effortless. You can become a community member by registering
+              your interest here. Your registration will be reviewed by a team
+              member in less than 48 hours before you can be added to the
+              community group
+            </p>
+          </div>
+        </div>
+        <!-- accordion 4 -->
+        <div class="accordion-item">
+          <h2>
+            <button
+              type="button"
+              class="w-full text-left px-4 py-3 bg-[#facc15] hover:bg-yellow-500 transition flex justify-between items-center font-medium"
+              onclick="toggleFlushAccordion(this)"
+            >
+              What kind of skills training do you offer
+              <span class="text-lg toggle-icon">+</span>
+            </button>
+          </h2>
+          <div
+            class="accordion-content hidden px-4 py-3 bg-yellow-100 text-sm text-gray-800"
+          >
+            <p class="bg-yellow-100 p-3 rounded">
+              It is effortless. You can become a community member by registering
+              your interest here. Your registration will be reviewed by a team
+              member in less than 48 hours before you can be added to the
+              community group
+            </p>
+          </div>
+        </div>
+        <!-- accordion 5 -->
+        <div class="accordion-item">
+          <h2>
+            <button
+              type="button"
+              class="w-full text-left px-4 py-3 bg-[#facc15] hover:bg-yellow-500 transition flex justify-between items-center font-medium"
+              onclick="toggleFlushAccordion(this)"
+            >
+              is this a remote community
+              <span class="text-lg toggle-icon">+</span>
+            </button>
+          </h2>
+          <div
+            class="accordion-content hidden px-4 py-3 bg-yellow-100 text-sm text-gray-800"
+          >
+            <p class="bg-yellow-100 p-3 rounded">
+              It is effortless. You can become a community member by registering
+              your interest here. Your registration will be reviewed by a team
+              member in less than 48 hours before you can be added to the
+              community group
+            </p>
+          </div>
+        </div>
+        <!-- accordion 6  -->
+        <div class="accordion-item">
+          <h2>
+            <button
+              type="button"
+              class="w-full text-left px-4 py-3 bg-[#facc15] hover:bg-yellow-500 transition flex justify-between items-center font-medium"
+              onclick="toggleFlushAccordion(this)"
+            >
+              what would i gain by been a memeber of the community ?
+              <span class="text-lg toggle-icon">+</span>
+            </button>
+          </h2>
+          <div
+            class="accordion-content hidden px-4 py-3 bg-yellow-100 text-sm text-gray-800"
+          >
+            <p class="bg-yellow-100 p-3 rounded">
+              It is effortless. You can become a community member by registering
+              your interest here. Your registration will be reviewed by a team
+              member in less than 48 hours before you can be added to the
+              community group
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer section -->
+    <footer class="bg-orange-400 px-6 py-20 text-white min-h-[400px]">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
+        <!-- Left Side - 70% -->
+        <div class="w-full md:w-[70%] space-y-6">
+          <h2 class="text-3xl font-extrabold text-white">Connect with Us</h2>
+          <p class="text-white">
+            Stay connected with us through our social media channels. Follow us
+            for the latest updates, events, and inspiring stories.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="contact.html"
+              class="bg-gray-700 hover:bg-orange-600 text-white px-4 py-2 rounded-md inline-block"
+            >
+              Fill Contact Form
+            </a>
+
+            <a
+              href="aboutus.html"
+              class="bg-gray-700 text-white px-4 py-2 rounded-md inline-block"
+            >
+              Join Us Today
+            </a>
+
+            <a
+              href="blog.html"
+              class="bg-gray-700 text-white px-4 py-2 rounded-md inline-block"
+            >
+              NewsLetter
+            </a>
+          </div>
+
+          <!-- Headquarters -->
+          <div>
+            <h3 class="text-xl font-bold text-white">Headquarters:</h3>
+            <p class="text-white">
+              The African Economic Mandate Project | 2, Layi Fashogbon Way road
+              beside GT Bank, Oju Ore, Ota, Ogun State, Nigeria.
+            </p>
+          </div>
+
+          <!-- Logo -->
+          <div>
+            <img
+              src="./img/ai-logo.png"
+              class="w-[160px] h-auto brightness-0 invert"
+              alt="Logo"
+            />
+          </div>
+        </div>
+
+        <!-- Right Side - 30% -->
+        <div class="w-full md:w-[30%] space-y-6">
+          <!-- Contact Text -->
+          <div class="text-3xl font-extrabold text-white">
+            Need Help? <br />
+            Contact Us for Enquiries, Partnerships, and Sponsorships.
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-2 text-white">
+            <p><i class="fas fa-phone-alt mr-2"></i>+234 706 927 5316</p>
+            <p>
+              <i class="fas fa-envelope mr-2"></i>Aempigniteafrica@gmail.com
+            </p>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-4 text-white text-2xl">
+            <a
+              href="https://youtube.com/@weigniteafrica?si=9GxK4gxT_sa-JhnM"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/weigniteafrica?igsh=YzljYTk1ODg3Zg=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://m.facebook.com/weigniteafrica/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://wa.me/2347069275316"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://x.com/weigniteafrica"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@weigniteafrica?_t=ZS-8yd7yi9fzJo&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-1/3 pl-10 mt-5">
+        <p class="text-left font-bold text-white">
+          © 2025 Ignite Africa. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

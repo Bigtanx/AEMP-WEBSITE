@@ -1,0 +1,17 @@
+{
+  "name": "aempp-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./public/styles/style.css",
+    "watch": "tailwindcss -i ./input.css -o ./public/styles/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1"
+  }
+}

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav
+      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-40"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 mt-2">
+            <img src="./img/ai-logo.png" alt="Logo" class="h-10" />
+          </div>
+
+          <!-- Hamburger Menu (Mobile) -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Menu Items -->
+          <ul
+            id="menu"
+            class="hidden md:flex space-x-6 text-gray-700 font-medium text-sm md:text-base"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="aboutus.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="programs.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Programs</a
+              >
+            </li>
+            <li>
+              <a
+                href="joinus.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Join Us Today</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="nav-link hover:bg-brightOrange px-3 py-2 rounded-md hover:text-white"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-4">
+          <a
+            href="index.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Home</a
+          >
+          <a
+            href="aboutus.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >About Us</a
+          >
+          <a
+            href="programs.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Programs</a
+          >
+          <a
+            href="joinus.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Join Us Today</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link block px-4 py-2 hover:bg-brightOrange hover:text-white rounded-md"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Our Program -->
+    <!-- Programs Overview Section -->
+    <section
+      class="flex flex-col md:flex-row items-center justify-between px-6 py-12 bg-[#2e9942] gap-8 mt-9"
+    >
+      <!-- Text content -->
+      <div class="md:w-1/2 w-full pl-12 mt-5">
+        <h2 class="text-4xl font-bold text-white mb-4">Our Programs:</h2>
+        <p class="text-sm font-thin text-white leading-relaxed">
+          Empowering Through Action <br />
+          At the African Economic Mandate Project, our programs are at the heart
+          of our mission to foster economic development, nurture
+          entrepreneurship, and uplift communities across Africa. Each year, we
+          host a series of impactful programs designed to promote career growth,
+          educational advancement, and spiritual enrichment.
+        </p>
+      </div>
+
+      <!-- Image container -->
+      <div
+        class="hidden md:flex justify-center items-center md:w-1/2 relative overflow-hidden rounded-lg"
+      >
+        <img
+          src="./img/face-handsome-african-american-business-woman-holding-tablet-background-business-peoples-multiracial-team.jpg"
+          alt="publicface"
+          class="w-full h-full object-cover mix-blend-overlay opacity-90"
+        />
+      </div>
+    </section>
+
+    <!-- Programs Cards Section -->
+    <section class="relative px-4 py-10 bg-[#2e9942] overflow-hidden">
+      <!-- Background logo image -->
+      <div
+        class="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-90 z-0"
+        style="background-image: url('/public/img/ia-logo-white.png')"
+      ></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <!-- Cards Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- CARD TEMPLATE -->
+          <!-- CARD 1 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-music text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Rejoice Africa Concert
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                February <br />
+                celebration of faith and culture, the Rejoice Africa Concert
+                brings together communities for a night of inspiring music and
+                worship. This annual event is a highlight of our calendar,
+                showcasing the rich diversity and talent within our region.
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              See More
+            </button>
+          </div>
+
+          <!-- CARD 2 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-briefcase text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Careerwise Seminar
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                April & October (Online Weekly Sessions) <br />
+                Designed for professionals and business leaders, the careerwise
+                seminar epuips participants with the tools they need to excel in
+                thier careers. Now available as a weekly online sessions, this
+                program offers flexible learning opportunities for individuals
+                at all stages of thier careers.
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-600 transition"
+            >
+              See More
+            </button>
+          </div>
+
+          <!-- CARD 3 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-cake-candles text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Anniversary Celebration
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                May <br />
+                Join us each May as we celebrate another year of growth, impact,
+                and community at AEMP. Our anniversay celebration is a time to
+                reflect on our achievement and set goals for the future
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-600 transition"
+            >
+              See More
+            </button>
+          </div>
+
+          <!-- CARD 4 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i
+                class="fa-solid fa-graduation-cap text-orange-600 text-3xl"
+              ></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Educational Drant for Secondary & Primary Schools
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                Commited to supporting the next generation, we provide
+                educational grants to pupils and students in primary and
+                Secondary schools within our host communities. This program
+                helps enusure that young minds have access to the education they
+                need to thrive.
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              See More
+            </button>
+          </div>
+
+          <!-- CARD 5 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i
+                class="fa-solid fa-circle-question text-orange-600 text-3xl"
+              ></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Annual Secondary Schools Quiz Competition
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                Encouraging academic excellence, our Annual Secondary Quiz
+                Competition brings together students from across the region to
+                test thier knowledge and compete for scholarships and prizes
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              See More
+            </button>
+          </div>
+
+          <!-- CARD 6 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-star text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">Glory Night</h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                August <br />
+                A night of spiritual renewal and worship, Glory Night is an
+                annual gathering where we come together to seek divine guidance
+                and celebrate the blessings in our lives
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              See More
+            </button>
+          </div>
+
+          <!-- CARD 7 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-hands-praying text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Thanksgiving Day
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                December <br />
+                As the year draws to a close, our Thanksgiving Day event is an
+                opportunity to express our gratitude for the many successes and
+                milestones we've achieved. its a time for reflection, praise,
+                and community
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              See More
+            </button>
+          </div>
+
+          <!-- CARD 8 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-laptop-code text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                ICT Skill Acquisition Program
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                Inaugural Edition: 2019 <br />
+                In response to the growing demand for technology skills, our ICT
+                Skill Acquisition Program provides participants with the
+                training needed to excel in the digital economy. This program
+                also offers interships and apprenticeships as part of our
+                commitment to driving innovation
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              See More
+            </button>
+          </div>
+
+          <!-- card 9 -->
+          <div
+            class="bg-white shadow p-6 rounded-lg flex flex-col transform transition hover:scale-[1.02]"
+          >
+            <div class="flex items-center space-x-6 mt-4 mb-4">
+              <i class="fa-solid fa-stethoscope text-orange-600 text-3xl"></i>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Medical Outreach
+              </h3>
+            </div>
+            <div class="card-content mb-4">
+              <p class="text-sm hidden">
+                Dedication to improving the well-being of our communities, our
+                Medical Outreach program offers free healthcare services to
+                those in need. This initiative is a vital part of our effort to
+                promote holistic development and well-being
+              </p>
+            </div>
+            <button
+              onclick="toggleCard(this)"
+              class="mt-auto w-full px-4 py-2 bg-orange-600 text-white text-sm text-center rounded hover:bg-green-700 transition"
+            >
+              See More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="bg-orange-400 px-6 py-20 text-white min-h-[400px]">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
+        <!-- Left Side - 70% -->
+        <div class="w-full md:w-[70%] space-y-6">
+          <h2 class="text-3xl font-extrabold text-white">Connect with Us</h2>
+          <p class="text-white">
+            Stay connected with us through our social media channels. Follow us
+            for the latest updates, events, and inspiring stories.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="contact.html"
+              class="bg-gray-700 hover:bg-orange-600 text-white px-4 py-2 rounded-md inline-block"
+            >
+              Fill Contact Form
+            </a>
+
+            <a
+              href="aboutus.html"
+              class="bg-gray-700 text-white px-4 py-2 rounded-md inline-block"
+            >
+              Join Us Today
+            </a>
+
+            <a
+              href="blog.html"
+              class="bg-gray-700 text-white px-4 py-2 rounded-md inline-block"
+            >
+              NewsLetter
+            </a>
+          </div>
+
+          <!-- Headquarters -->
+          <div>
+            <h3 class="text-xl font-bold text-white">Headquarters:</h3>
+            <p class="text-white">
+              The African Economic Mandate Project | 2, Layi Fashogbon Way road
+              beside GT Bank, Oju Ore, Ota, Ogun State, Nigeria.
+            </p>
+          </div>
+
+          <!-- Logo -->
+          <div class="mb-10">
+            <img
+              src="./img/ai-logo.png"
+              class="w-[160px] h-auto brightness-0 invert"
+              alt="Logo"
+            />
+          </div>
+        </div>
+
+        <!-- Right Side - 30% -->
+        <div class="w-full md:w-[30%] space-y-6">
+          <!-- Contact Text -->
+          <div class="text-3xl font-extrabold text-white">
+            Need Help? <br />
+            Contact Us for Enquiries, Partnerships, and Sponsorships.
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-2 text-white">
+            <p><i class="fas fa-phone-alt mr-2"></i>+234 706 927 5316</p>
+            <p>
+              <i class="fas fa-envelope mr-2"></i>Aempigniteafrica@gmail.com
+            </p>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-4 text-white text-2xl">
+            <a
+              href="https://youtube.com/@weigniteafrica?si=9GxK4gxT_sa-JhnM"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/weigniteafrica?igsh=YzljYTk1ODg3Zg=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://m.facebook.com/weigniteafrica/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://wa.me/2347069275316"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://x.com/weigniteafrica"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@weigniteafrica?_t=ZS-8yd7yi9fzJo&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-1/3 pl-10 mt-5">
+        <p class="text-left font-bold text-white">
+          © 2025 Ignite Africa. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
